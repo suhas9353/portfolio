@@ -15,7 +15,12 @@ export default function Navbar() {
             </div>
 
             <div className="flex gap-8 text-sm font-medium text-gray-300">
-                <a href="#" className="hover:text-white transition-colors">Work</a>
+                <button
+                    onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="hover:text-white transition-colors"
+                >
+                    Work
+                </button>
                 <a href="#" className="hover:text-white transition-colors">About</a>
                 <a href="#contact" className="hover:text-white transition-colors">Contact</a>
             </div>

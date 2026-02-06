@@ -21,7 +21,7 @@ export default function Contact() {
                     <span>© 2026 Suhas B S</span>
                     <div className="flex gap-4">
                         <a href="https://linkedin.com/in/suhas-bs-4aa13b251" target="_blank" className="hover:text-white transition-colors">LinkedIn</a>
-                        <a href="#" className="hover:text-white transition-colors">GitHub</a>
+                        <a href="https://github.com/suhas9353" target="_blank" className="hover:text-white transition-colors">GitHub</a>
                     </div>
                 </div>
             </div>
