@@ -23,8 +23,8 @@ export default function Overlay() {
                 className="absolute inset-0 flex items-center justify-center p-8 text-center"
             >
                 <div>
-                    <h1 className="text-6xl md:text-8xl font-bold tracking-tighter">My Name</h1>
-                    <p className="text-xl md:text-2xl mt-4 font-light text-gray-300">Creative Developer.</p>
+                    <h1 className="text-6xl md:text-8xl font-bold tracking-tighter uppercase">Suhas B S</h1>
+                    <p className="text-xl md:text-2xl mt-4 font-light text-gray-300">Data Analyst | Machine Learning.</p>
                 </div>
             </motion.div>
 
@@ -34,8 +34,8 @@ export default function Overlay() {
                 className="absolute inset-0 flex items-center justify-start p-12 md:p-24"
             >
                 <h2 className="text-4xl md:text-6xl font-bold max-w-2xl leading-tight">
-                    I build digital <br />
-                    <span className="text-blue-400">experiences.</span>
+                    Transforming data <br />
+                    <span className="text-blue-400">into insights.</span>
                 </h2>
             </motion.div>
 
@@ -45,8 +45,8 @@ export default function Overlay() {
                 className="absolute inset-0 flex items-center justify-end p-12 md:p-24 text-right"
             >
                 <h2 className="text-4xl md:text-6xl font-bold max-w-2xl leading-tight">
-                    Bridging design <br />
-                    and <span className="text-purple-400">engineering.</span>
+                    Building scalable <br />
+                    <span className="text-purple-400">platforms.</span>
                 </h2>
             </motion.div>
         </div>

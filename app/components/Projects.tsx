@@ -5,24 +5,24 @@ import { motion } from "framer-motion";
 const projects = [
     {
         id: 1,
-        title: "Neon Horizon",
-        category: "Web Application",
-        description: "A futuristic dashboard with real-time data visualization.",
-        color: "from-blue-500/20 to-purple-500/20"
+        title: "Global Dream Connect",
+        category: "EdTech Platform",
+        description: "Built a scalable mentor-student education platform, optimized UI, and automated workflows as VP of Technology.",
+        color: "from-blue-500/20 to-cyan-500/20"
     },
     {
         id: 2,
-        title: "EcoSphere",
-        category: "Mobile Experience",
-        description: "Interactive 3D globe for tracking environmental changes.",
-        color: "from-green-500/20 to-teal-500/20"
+        title: "Health Insurance Prediction",
+        category: "Machine Learning",
+        description: "Developed a regression model using Python and Scikit-learn to predict insurance costs with high accuracy.",
+        color: "from-emerald-500/20 to-teal-500/20"
     },
     {
         id: 3,
-        title: "Quantum Flow",
-        category: "Experimental",
-        description: "Generative art piece using WebGL and fluid dynamics.",
-        color: "from-orange-500/20 to-red-500/20"
+        title: "Data Analytics Dashboard",
+        category: "Palle Technology Internship",
+        description: "Created comprehensive Power BI dashboards and performed analytics using Python and MySQL.",
+        color: "from-yellow-500/20 to-orange-500/20"
     }
 ];
 
