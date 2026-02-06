@@ -10,7 +10,10 @@ export default function Navbar() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between backdrop-blur-md bg-black/30 border-b border-white/10"
         >
-            <div className="text-xl font-bold tracking-tighter">
+            <div
+                className="text-xl font-bold tracking-tighter cursor-pointer hover:text-gray-300 transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
                 SUHAS<span className="text-gray-400"> B S</span>
             </div>
 
@@ -22,7 +25,7 @@ export default function Navbar() {
                     Work
                 </button>
                 <button
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
                     className="hover:text-white transition-colors"
                 >
                     About

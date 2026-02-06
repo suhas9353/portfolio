@@ -3,6 +3,7 @@ import Overlay from "./components/Overlay";
 import Projects from "./components/Projects";
 import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
+import About from "./components/About";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Navbar />
       <ScrollyCanvas />
       <Overlay />
+      <About />
       <Projects />
       <Contact />
     </main>

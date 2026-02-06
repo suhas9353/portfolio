@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 
 export default function Overlay() {
@@ -15,6 +16,38 @@ export default function Overlay() {
     const opacity3 = useTransform(scrollYProgress, [0.55, 0.65, 0.75], [0, 1, 0]);
     const y3 = useTransform(scrollYProgress, [0.55, 0.75], [50, -50]);
 
+    // Typewriter effect state
+    const [text, setText] = React.useState("");
+    const [roleIndex, setRoleIndex] = React.useState(0);
+    const [isDeleting, setIsDeleting] = React.useState(false);
+
+    const roles = ["Data Analyst & ML Enthusiast", "Dashboard Builder & Problem Solver"];
+    const typingSpeed = 100;
+    const deletingSpeed = 50;
+    const pauseTime = 2000;
+
+    React.useEffect(() => {
+        const handleTyping = () => {
+            const currentRole = roles[roleIndex];
+
+            if (isDeleting) {
+                setText(currentRole.substring(0, text.length - 1));
+            } else {
+                setText(currentRole.substring(0, text.length + 1));
+            }
+
+            if (!isDeleting && text === currentRole) {
+                setTimeout(() => setIsDeleting(true), pauseTime);
+            } else if (isDeleting && text === "") {
+                setIsDeleting(false);
+                setRoleIndex((prev) => (prev + 1) % roles.length);
+            }
+        };
+
+        const timer = setTimeout(handleTyping, isDeleting ? deletingSpeed : typingSpeed);
+        return () => clearTimeout(timer);
+    }, [text, isDeleting, roleIndex]);
+
     return (
         <div className="fixed inset-0 pointer-events-none z-10 flex flex-col justify-center text-white mix-blend-difference">
             {/* Section 1: Center */}
@@ -24,7 +57,9 @@ export default function Overlay() {
             >
                 <div>
                     <h1 className="text-6xl md:text-8xl font-bold tracking-tighter uppercase">Suhas B S</h1>
-                    <p className="text-xl md:text-2xl mt-4 font-light text-gray-300">Data Analyst | Machine Learning.</p>
+                    <p className="text-xl md:text-2xl mt-4 font-light text-gray-300 h-8">
+                        {text}<span className="animate-pulse text-blue-400">|</span>
+                    </p>
                 </div>
             </motion.div>
 
