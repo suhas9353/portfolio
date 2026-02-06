@@ -21,8 +21,18 @@ export default function Navbar() {
                 >
                     Work
                 </button>
-                <a href="#" className="hover:text-white transition-colors">About</a>
-                <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+                <button
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className="hover:text-white transition-colors"
+                >
+                    About
+                </button>
+                <button
+                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="hover:text-white transition-colors"
+                >
+                    Contact
+                </button>
             </div>
         </motion.nav>
     );
